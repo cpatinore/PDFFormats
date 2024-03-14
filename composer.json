@@ -1,0 +1,24 @@
+{
+    "name": "cpatinore/pdfformat",
+    "description": "Crear formatos pdf",
+    "type": "library",
+    "require": {
+        "tecnickcom/tcpdf": "^6.6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PDFFormats\\": "src/"
+        },
+        "files": [
+            "src/Helpers/table.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "cpatinore",
+            "email": "cpatinore@unal.edu.co"
+        }
+    ],
+    "minimum-stability": "stable"
+}
