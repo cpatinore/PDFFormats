@@ -21,6 +21,8 @@ interface FilePDF
 
         function SetFont($font, $style, $size);
 
+        function setFooterContent($content);
+        
         function Footer();
 
         function AddPage();
