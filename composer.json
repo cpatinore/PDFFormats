@@ -4,7 +4,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "PDFFormats\\": "src/"
+      "PDFFormat\\": "src/"
     },
     "files": [
       "src/Helpers/table.php"
