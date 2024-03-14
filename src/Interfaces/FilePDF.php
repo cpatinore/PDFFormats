@@ -22,7 +22,11 @@ interface FilePDF
         function SetFont($font, $style, $size);
 
         function setFooterContent($content);
+
+        function getAliasNumPage();
         
+        function getAliasNbPages();
+
         function Footer();
 
         function AddPage();
