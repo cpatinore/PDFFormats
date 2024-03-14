@@ -1,6 +1,6 @@
 <?php
 
-namespace ExcelFormats\Formats;
+namespace PDFFormat\Formats;
 
 use PDFFormat\Interfaces\FilePDF;
 use TCPDF;
