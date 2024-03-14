@@ -1,6 +1,6 @@
 <?php
 
-namespace ExcelFormats;
+namespace PDFFormat;
 
 use PDFFormat\Interfaces\FilePDF;
 
