@@ -17,7 +17,7 @@ class myTCPDF extends TCPDF implements FilePDF
         $head = "";
 
         foreach ($headers as &$config) {
-            $head .= '<th width="' . $config["width"] . '"><b>' . $config["title"] . "</b></th>";
+            $head .= '<th style="' . $config["style"] . '"><b>' . $config["title"] . "</b></th>";
         }
 
         $head = "<tr>$head</tr>";
@@ -32,7 +32,7 @@ class myTCPDF extends TCPDF implements FilePDF
 
 
             foreach ($headers as $header => $config) {
-                $body .= '<td width="' . $config["width"] . '">';
+                $body .= '<td style="' . $config["style"] . '">';
 
                 if (isset ($row[$header])) {
                     switch ($config['type']) {
