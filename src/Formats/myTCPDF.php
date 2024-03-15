@@ -23,13 +23,18 @@ class myTCPDF extends TCPDF implements FilePDF
         $head = "<tr>$head</tr>";
 
         $body = "";
+        $oddRow = false;
         foreach ($data as &$row) {
-            $body .= "<tr>";
+            $backgroundColor = $oddRow ? '#e6e6e6' : '#fff';
+            $oddRow = !$oddRow;
+
+            $body .= '<tr style="background-color: ' . $backgroundColor . ';">';
+
 
             foreach ($headers as $header => $config) {
                 $body .= '<td width="' . $config["width"] . '">';
 
-                if (isset ($row[$header])) {
+                if (isset($row[$header])) {
                     switch ($config['type']) {
                         case 'money':
                             $body .= "$" . number_format($row[$header], 0, ',', '.');
@@ -59,14 +64,16 @@ class myTCPDF extends TCPDF implements FilePDF
 
         $table = <<<EOF
                     $style
-                    <div><table class="table" cellpadding="2" cellspacing="1" border="0.5">
+                    <div><table class="table" cellpadding="2" cellspacing="0" border="0.5" style="margin:0; padding:0;">
                         
+                            <thead>
                             <tr>
-                                <td colspan="$cols" >
+                                <th colspan="$cols" >
                                     $title
-                                </td>
+                                </th>
                             </tr>
                             $head
+                            </thead>
                             $body
                     </table>
                     </div>
