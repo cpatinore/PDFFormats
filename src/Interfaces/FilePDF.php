@@ -24,8 +24,10 @@ interface FilePDF
         function setFooterContent($content);
 
         function getAliasNumPage();
-        
+
         function getAliasNbPages();
+
+        function Header();
 
         function Footer();
 
@@ -36,6 +38,10 @@ interface FilePDF
         function createTable($headers, $data, $title, $i, $style);
 
         function lastPage();
+
+        function setHeaderFont($font);
+
+        function setFooterFont($font);
 
         function Output($name, $dest);
 }
