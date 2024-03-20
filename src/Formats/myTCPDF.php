@@ -5,7 +5,7 @@ namespace PDFFormat\Formats;
 use PDFFormat\Interfaces\FilePDF;
 use TCPDF;
 
-class myTCPDF extends TCPDF implements FilePDF
+class MyTCPDF extends TCPDF implements FilePDF
 {
 
     private $footerContent;
